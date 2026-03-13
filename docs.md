@@ -11,7 +11,7 @@ mouse_rate,
 process_count
 - [ ] Define what “user behavior” means
 - [ ] Collect data
-- [ ] Choose a baseline prediction method
+- [x] Choose a baseline prediction method (LinearRegression → GradientBoostingRegressor + RandomForestClassifier)
 - [ ] Train and evaluate
 - [ ] make a nix module
 
