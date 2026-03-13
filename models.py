@@ -38,6 +38,7 @@ USE_COLS = [
 ]
 
 TREND_THRESHOLD = 3.0  # % CPU change to classify as increase/decrease
+BASELINE_R2 = 0.1985  # LinearRegression baseline R2 score for comparison
 
 
 # =========================
@@ -374,7 +375,7 @@ def run_all_models(csv_path):
         f"  {'3. MLPRegressor / Neural Network (Regression)':<45} | R2 = {results_3['r2']:.4f}"
     )
 
-    original_r2 = 0.1985
+    original_r2 = BASELINE_R2
     best_r2 = max(results_1["r2"], results_3["r2"])
     improvement = ((best_r2 - original_r2) / abs(original_r2)) * 100
 
